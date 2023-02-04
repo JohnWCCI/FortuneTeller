@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortuneTeller", "FortuneTeller\FortuneTeller.csproj", "{51242858-823A-4B7F-8864-F4E185B105A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortuneTest", "FortuneTest\FortuneTest.csproj", "{1058ECB5-F9BC-44E8-83F0-131D66FF9885}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51242858-823A-4B7F-8864-F4E185B105A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51242858-823A-4B7F-8864-F4E185B105A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51242858-823A-4B7F-8864-F4E185B105A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51242858-823A-4B7F-8864-F4E185B105A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1058ECB5-F9BC-44E8-83F0-131D66FF9885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1058ECB5-F9BC-44E8-83F0-131D66FF9885}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1058ECB5-F9BC-44E8-83F0-131D66FF9885}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1058ECB5-F9BC-44E8-83F0-131D66FF9885}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {12AF913A-0E91-48F1-AE41-56D4DD9462CA}
+	EndGlobalSection
+EndGlobal
