@@ -20,6 +20,7 @@ namespace FortuneTeller
         private int age;
         private int birthMonth;
         private RoygbivEnum favoriteColor;
+        private int siblings;
 
         /// <summary>
         /// Maintain the error message.
@@ -53,6 +54,8 @@ namespace FortuneTeller
         /// </summary>
         /// <remarks>Red, orange, yellow, green, blue, indigo, violet.</remarks>
         public RoygbivEnum FavoriteColor { get => favoriteColor; set => favoriteColor = value; }
+
+        public int Siblings { get => siblings; set => siblings = value; }
 
         /// <summary>
         /// Validate the first name
@@ -148,9 +151,35 @@ namespace FortuneTeller
             }
             throw new ValidateException(ErrorString);
         }
+
+        /// <summary>
+        /// Validates Siblings to be greater then 0
+        /// or less then 10
+        /// </summary>
+        /// <param name="kids"></param>
+        /// <returns>the int of the age</returns>
+        /// <exception cref="ValidateException"></exception>
+        private int ValidateSiblings(int kids)
+        {
+
+            // the checks the vale to be greater or 
+            if (kids < 0)
+            {
+                ErrorString = "User's Siblings Count has to be at lest 0";
+            }
+            else if (kids > 130)
+            {
+                ErrorString = "User's Siblings count has to be less then 10";
+            }
+            else
+            {
+                return kids;
+            }
+            throw new ValidateException(ErrorString);
+        }
         public override string ToString()
         {
-            return $"{lastName}, {firstName}\n Age {age} years\n Birth Month {CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(BirthMonth)}\n Favorite Color {favoriteColor} ";
+            return $"{lastName}, {firstName}\nAge {age} years\nBirth Month {CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(BirthMonth)}\nFavorite Color {favoriteColor}\nSiblings {Siblings}";
         }
     }
 }

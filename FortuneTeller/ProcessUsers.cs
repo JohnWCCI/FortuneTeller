@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FortuneTeller
+﻿namespace FortuneTeller
 {
     /// <summary>
     /// This class will process the input 
@@ -57,12 +49,16 @@ namespace FortuneTeller
                                 user.BirthMonth = int.Parse(display.PromptInput("Birth Month:", true));
                                 break;
                             case 5:
+                                user.Siblings = int.Parse(display.PromptInput("How many Siblings:"));
+                                break;
+                            case 6:
                                 display.WriteLine(GetColorString());
                                 user.FavoriteColor = ParseEnum(display.PromptInput("Favorite Color:"));
-                             break;  
+                                break;
                         }
                         controlDisplay++;
-                        if(controlDisplay>=6) {
+                        if (controlDisplay > 6)
+                        {
                             break;
                         }
                     }
@@ -72,7 +68,7 @@ namespace FortuneTeller
                         display.WriteLine(ve.Message);
                         display.WriteLine();
                     }
-                    catch (Exception ex) 
+                    catch (Exception ex)
                     {
                         display.WriteLine();
                         display.WriteLine(ex.Message);
@@ -89,7 +85,7 @@ namespace FortuneTeller
         private string GetColorString()
         {
             string retValue = "Colors:\n";
-            for (int x = 0; x < (int)RoygbivEnum.Max;x++)
+            for (int x = 0; x < (int)RoygbivEnum.Max; x++)
             {
                 retValue += $"{(RoygbivEnum)x}\n";
             }
@@ -102,7 +98,7 @@ namespace FortuneTeller
             {
                 return (RoygbivEnum)Enum.Parse(typeof(RoygbivEnum), value, true);
             }
-            catch 
+            catch
             {
                 throw new ValidateException("Color not found");
             }
