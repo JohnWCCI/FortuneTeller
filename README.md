@@ -3,7 +3,7 @@ Fortune Telling Console Application
 
 ## Overview
 
-Develop a console application that will tell the userís fortune based on data received from the user.
+Develop a console application that will tell the user‚Äôs fortune based on data received from the user.
 
 **Skills Required**
 
@@ -12,18 +12,41 @@ Develop a console application that will tell the userís fortune based on data re
 3. Conditionals
 4. Strings
 5. Tasks
+6. Exceptions (Try, Catch, Finally)
+7. Inheritance
 
-#Part 1
+## Part 1
 
-Ask the user for the userís first name.
-	first name can not be Null or Empty
-	first name must be 
-Ask the user for the userís last name.
+### TDD Unit Test
+
+**Note:** *TDD test should handle execptions gracefully*
+
+- Ask the user for the user‚Äôs first name.
+	- first name can not be Null or Empty
+	- first name can not be greater then 50
 	
-Ask the user for the userís age.
-Ask the user for the userís birth month (as an 'int').
-Ask the user for the userís favorite ROYGBIV color.
-If the user does not know what ROYGBIV is, ask the user to enter ìHelpî to get a list of the ROYGBIV colors.
+- Ask the user for the user‚Äôs last name.
+ 	- last name can not be Null or Empty
+	- last name can not be greater then 50
+	
+- Ask the user for the user‚Äôs age.
+	- age can not be less then 0
+	- age can not be greater then 130
+	
+- Ask the user for the user‚Äôs birth month (as an 'int').
+	- birth month must be between 1 and 12
+	
+- Ask the user for the user's number of siblings.
+	- age can not be less then 0
+	- age can not be greater then 13
+	
+- Ask the user for the user‚Äôs favorite ROYGBIV color.
+	- The ROYGBIV colors are red, orange, yellow, green, blue, indigo, violet.
+	
+- If the user does not know what ROYGBIV is, ask the user to enter ‚ÄúHelp‚Äù to get a list of the ROYGBIV colors.
 
+### Create the code that completes the TDD test
 
+| Conduction | Example |
+| age is odd | 14 years |
 
