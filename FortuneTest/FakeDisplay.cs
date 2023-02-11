@@ -13,7 +13,7 @@ namespace FortuneTest
             // does nothing in a test enviorment
         }
 
-        public string PromptInput(string display, bool isInteger = false)
+        public string PromptInput(string display, bool isInteger = false, string helpMessage = "")
         {
             //Returns the display parmeter
             return display;

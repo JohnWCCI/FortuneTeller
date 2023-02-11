@@ -37,7 +37,7 @@
         /// </summary>
         /// <param name="display">Display value.</param>
         /// <returns>Keyborad input.</returns>
-        public string PromptInput(string display, bool isInteger = false)
+        public string PromptInput(string display, bool isInteger = false, string helpMessage= "")
         {
             //Initialize return value
             string retValue = string.Empty;
@@ -52,17 +52,30 @@
 
                 // Get keyboard input
                 lineInput = this.ReadLine();
-
+                if (lineInput is not null && lineInput.ToUpper() == "HELP")
+                {
+                    lineInput= "";
+                    if(!string.IsNullOrEmpty(helpMessage))
+                        Console.WriteLine(helpMessage);
+                }
                 // check if the user wants to exit
-                if (lineInput is not null && lineInput.ToUpper() == "EXIT")
+               else if (lineInput is not null && lineInput.ToUpper() == "QUIT")
                 {
                     Console.WriteLine();
                     Console.WriteLine("Good Bye!!!");
                     Environment.Exit(0);
                 }
                 // checks input for value
-                if (lineInput != null)
+                if (!string.IsNullOrEmpty(lineInput))
+                {
                     retValue = lineInput;
+                }
+                else
+                {
+                    //Display prompt
+                    Console.WriteLine($"Invalid input.");
+                    Console.Write($"{display}? ");
+                }
 
                 // Check for int value
                 if (isInteger)
@@ -105,6 +118,5 @@
         {
             return Console.ReadLine();
         }
-
     }
 }

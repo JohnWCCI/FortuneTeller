@@ -27,14 +27,16 @@
             {
                 int controlDisplay = 0;
                 User user = new User();
+                // loop here until controlDisplay > 6
                 while (true)
                 {
                     try
                     {
+                        //Use switch to control prompt until a valid response 
                         switch (controlDisplay)
                         {
                             case 0:
-                                display.ClearScreen("Type Exit to quit");
+                                display.ClearScreen("Type quit to Exit the program");
                                 break;
                             case 1:
                                 user.FirstName = display.PromptInput("First Name:");
@@ -52,8 +54,7 @@
                                 user.Siblings = int.Parse(display.PromptInput("How many Siblings:"));
                                 break;
                             case 6:
-                                display.WriteLine(GetColorString());
-                                user.FavoriteColor = ParseEnum(display.PromptInput("Favorite Color:"));
+                                user.FavoriteColor = ParseEnum(display.PromptInput("Favorite Color:", false, GetColorString()));
                                 break;
                         }
                         controlDisplay++;
@@ -75,23 +76,35 @@
                         display.WriteLine();
                     }
                 }
-
-                display.ClearScreen();
-                display.WriteLine(user.ToString());
+                UserFortune userFortune = new UserFortune(user);
+                display.ClearScreen("Your Fortune is..");
+                string s = $"{user.FirstName} {user.LastName} will retire in {userFortune.Retirement} years, with {userFortune.Balance} in the bank, a vacation home in {userFortune.Location}, and travel by {userFortune.Transport}";
+                display.WriteLine(s);
+                display.WriteLine();
                 display.ReadLine();
             }
         }
-
+        /// <summary>
+        /// Gets the string values of an Enum
+        /// </summary>
+        /// <returns>a delimted string of colors</returns>
         private string GetColorString()
         {
-            string retValue = "Colors:\n";
+            string retValue = "The Colors are: ";
             for (int x = 0; x < (int)RoygbivEnum.Max; x++)
             {
-                retValue += $"{(RoygbivEnum)x}\n";
+                retValue += $"{(RoygbivEnum)x}, ";
             }
-            retValue += "\n";
+
             return retValue;
         }
+
+        /// <summary>
+        /// Converts a string into an Enum value.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        /// <exception cref="ValidateException"></exception>
         private RoygbivEnum ParseEnum(string value)
         {
             try
