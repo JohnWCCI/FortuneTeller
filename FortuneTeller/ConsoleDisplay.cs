@@ -52,6 +52,7 @@
 
                 // Get keyboard input
                 lineInput = this.ReadLine();
+                ///Check to see if help needed
                 if (lineInput is not null && lineInput.ToUpper() == "HELP")
                 {
                     lineInput= "";
