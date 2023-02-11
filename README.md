@@ -14,6 +14,7 @@ Develop a console application that will tell the user’s fortune based on data re
 5. Tasks
 
 #Part 1
+
 Ask the user for the user’s first name.
 	first name can not be Null or Empty
 	first name must be 
