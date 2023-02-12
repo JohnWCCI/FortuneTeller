@@ -10,5 +10,8 @@
         string ReadLine();
         void Write(string line);
         void WriteLine(string? line = null);
+
+
+
     }
 }
