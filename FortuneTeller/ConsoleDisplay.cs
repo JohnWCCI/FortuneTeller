@@ -63,7 +63,7 @@
                else if (lineInput is not null && lineInput.ToUpper() == "QUIT")
                 {
                     Console.WriteLine();
-                    Console.WriteLine("Good Bye!!!");
+                    Console.WriteLine("Nobody likes a quitter...");
                     Environment.Exit(0);
                 }
                 // checks input for value

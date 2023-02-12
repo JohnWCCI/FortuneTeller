@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace FortuneTeller
 {
+    /// <summary>
+    /// User Fortunes
+    /// </summary>
     public class UserFortune
     {
         private readonly User user;

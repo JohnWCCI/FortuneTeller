@@ -1,5 +1,8 @@
 ﻿namespace FortuneTeller
 {
+    /// <summary>
+    /// ROYGBIV Color Enum
+    /// </summary>
     public enum RoygbivEnum
     {
         Red,

@@ -1,5 +1,8 @@
 ﻿namespace FortuneTeller
 {
+    /// <summary>
+    /// Use this for mocing console I/O
+    /// </summary>
     public interface IConsoleDisplay
     {
         void ClearScreen(string prompt = "");

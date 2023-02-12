@@ -37,7 +37,7 @@ Develop a console application that will tell the user’s fortune based on data 
 	- birth month must be between 1 and 12
 	
 - Ask the user for the user's number of siblings.
-	- age can not be greater then 13
+	- siblings can not be greater then 13
 	
 - Ask the user for the user’s favorite ROYGBIV color.
 	- The ROYGBIV colors are red, orange, yellow, green, blue, indigo, violet.
@@ -98,6 +98,9 @@ Display the user's fortune in this format:
 
 Your program should be able to process input whether a user enters capital or lowercase letters.
 
+## Stretch Tasks (Optional)
+Give the user the ability to quit the program by typing "Quit" (should not be case sensitive) at any point where the program is looking for user input. 
+The program should print “Nobody likes a quitter...” before ending. 
 
 
 

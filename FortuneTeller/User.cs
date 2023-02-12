@@ -51,7 +51,10 @@ namespace FortuneTeller
         /// <remarks>Red, orange, yellow, green, blue, indigo, violet.</remarks>
         public RoygbivEnum FavoriteColor { get => favoriteColor; set => favoriteColor = value; }
 
-        public int Siblings { get => siblings; set => siblings = value; }
+        /// <summary>
+        /// The Siblings of the user.
+        /// </summary>
+        public int Siblings { get => siblings; set => siblings = UserValdation.ValidateSiblings(value); }
 
        
         /// <summary>
